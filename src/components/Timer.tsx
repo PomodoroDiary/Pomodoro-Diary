@@ -8,10 +8,26 @@ const Timer = () => {
     setIsStarted(!isStarted);
   }
 
+  const beforeStart = (): JSX.Element  => {
+    return (
+      <>
+        <h1>15:00</h1>
+      </>
+    )
+  }
+
+  const afterStart = (): JSX.Element  => {
+    return (
+      <>
+        
+      </>
+    )
+  }
+
   return (
     <>
       <form onSubmit={submitHandler}>
-        {!isStarted ? <h1>15: 00</h1> : <h1>14: 59</h1>}
+        {!isStarted ? beforeStart() : afterStart()}
         <button type="submit">시작</button>
       </form>
     </>
